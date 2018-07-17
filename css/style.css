@@ -22,3 +22,36 @@ body {
     top: 0px;
     right: 6px;
 }
+
+#min-btn {
+    border: none;
+    background-color: transparent;
+    color: darkgrey;
+    outline: none;
+}
+
+#min-btn:hover {
+    background-color: #696969;
+}
+
+#max-btn {
+    border: none;
+    background-color: transparent;
+    color: darkgrey;
+    outline: none;
+}
+
+#max-btn:hover {
+    background-color: #696969;
+}
+
+#close-btn {
+    border: none;
+    background-color: transparent;
+    color: darkgrey;
+    outline: none;
+}
+
+#close-btn:hover {
+    background-color: #C75050
+}

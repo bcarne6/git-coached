@@ -1,7 +1,7 @@
 (function () {
 
     const electron = require('electron'); 
-    const {app, BrowserWindow} = electron
+    const {app, BrowserWindow} = electron.remote;
     
    function init() { 
         document.getElementById("min-btn").addEventListener("click", function (e) {
