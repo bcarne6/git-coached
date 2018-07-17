@@ -10,8 +10,14 @@
         });
 
         document.getElementById("max-btn").addEventListener("click", function (e) {
-             var window = BrowserWindow.getFocusedWindow(); 
-             window.maximize(); 
+             var window = BrowserWindow.getFocusedWindow();
+             if(window.isMaximized()){
+                 window.unmaximize();
+             } 
+             else{
+                window.maximize();
+             }
+                          
         });
 
         document.getElementById("close-btn").addEventListener("click", function (e) {

@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <title>Git Coached</title>
-  </head>
-  <body>
-      <div id="title-bar">
-          <div id="title">Git Coached</div>
-          <div id="title-bar-btns">
-               <button id="min-btn">🗕</button>
-               <button id="max-btn">☐</button>
-               <button id="close-btn">╳</button>
-          </div>
-     </div>
-    <h1 class="col-lg-8 font-weight-bold align-content-center">Replay File Uploader</h1>
-    <div class="container">
-      <div class="row">
-        <div>Test</div>
-      </div>
+    <link href="css/rocket-league-btn.css" rel="stylesheet" />
+    <title>Bread boi's Replay Manager</title>
+</head>
+
+<body>
+    <div id="title-bar">
+        <div id="title">Replay Manager</div>
+        <div id="title-bar-btns">
+            <button id="min-btn">🗕</button>
+            <button id="max-btn">☐</button>
+            <button id="close-btn">╳</button>
+        </div>
     </div>
-    
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-    <script>require('./renderer.js')</script>
+
+    <div class="navigation-body">
+        <ul class="container">
+            <li class="rocketleague-3 button" id="myreplays">
+                <a href="#">My Replays</a>
+            </li><br />
+            <li class="rocketleague-3 button" id="addreplay">
+                <a href="#">Add Replay</a>
+            </li><br />
+            <li class="rocketleague-3 button" id="coachme">
+                <a href="#">Coach Me</a>
+            </li><br />
+            <li class="rocketleague-3 button" id="settings">
+                <a href="#">Settings</a>
+            </li><br />
+        </ul>
+    </div>
+
+
+    <script>
+        if (typeof module === 'object') {window.module = module; module = undefined;}
+    </script>
+    <script>
+        require('./renderer.js')
+    </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/win-controls.js"></script>
-    <script>if (window.module) module = window.module;</script>
-  </body>
+    <script src="js/rocket-league-buttons.js"></script>
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</body>
+
 </html>

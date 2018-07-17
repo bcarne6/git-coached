@@ -1,0 +1,70 @@
+/*Styling from https://codepen.io/CelloDE/pen/JWVKNL*/
+::-webkit-scrollbar { display: none; }
+
+.navigation-body {
+    height: 100px;
+    width: 100px;
+    margin-right: 5.5px;
+    margin-left: 5.5px;
+    margin-bottom: 5.5px;
+    margin-top: 5.5px;
+    color: white;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/* * {
+    box-sizing: border-box;
+} */
+
+a {
+    font-family: sans-serif;
+    font-size: 1em;
+    display: inline-block;
+    width: 225px;
+    transform: skewX(.5rad);
+    text-decoration: none;
+}
+
+.button {
+    line-height: 30px;
+    display: inline-block;
+    margin: 2px 0;
+    padding: 0 15px;
+    cursor: pointer;
+    transform: skewX(-.5rad);
+    text-align: left;
+    letter-spacing: .5px;
+    border-radius: 5px;
+}
+
+.container {
+    width: 350px;
+    text-align: left;
+}
+
+/* General Buttons */
+.rocketleague-3 {
+    color: #FFFFFF;
+    background: rgba(0,0,0,.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.rocketleague-3 a {
+    color: #FFFFFF;
+}
+
+.rocketleague-3:hover {
+    background: #BDEEFF;
+    box-shadow: 0 0 5px #43AFFF,0 0 10px #43AFFF,inset 0 0 1px #43AFFF, inset 0 0 12px 5px rgba(255,255,255,.8);
+}
+
+.rocketleague-3:active {
+    background: #4ACDFF!important;
+    box-shadow: 0 0 5px #3CB8FF,0 0 10px #3CB8FF,inset 0 0 1px #3CB8FF,inset 0 0 4px 3px rgba(60,184,255,1)!important;
+}
+
+.rocketleague-3:hover a, .rocketleague-3:active a {
+    color: #005F8E!important;
+    text-shadow: 0 0 1px!important;
+}

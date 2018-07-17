@@ -1,5 +1,6 @@
 body {
     background-color: rgb(42, 55, 73);
+    overflow-y: hidden;
 }
 
 #title-bar {
@@ -7,7 +8,7 @@ body {
     height: 30px; 
     background-color:rgba(25, 25, 27, 0.781);
     padding: none;
-    margin: 0px; 
+    margin: 0px;
 }
    
 #title {
