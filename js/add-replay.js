@@ -1,25 +1,4 @@
-(function () {
-    var holder = document.getElementById('drag-file');
-
-    holder.ondragover = () => {
-        return false;
-    };
-
-    holder.ondragleave = () => {
-        return false;
-    };
-
-    holder.ondragend = () => {
-        return false;
-    };
-
-    holder.ondrop = (e) => {
-        e.preventDefault();
-
-        for (let f of e.dataTransfer.files) {
-            console.log('File(s) you dragged here: ', f.path)
-        }
-        
-        return false;
-    };
-})();
+document.getElementById('drag').ondragstart = (event) => {
+    event.preventDefault()
+    ipcRenderer.send('ondragstart', '/path/to/item')
+  }

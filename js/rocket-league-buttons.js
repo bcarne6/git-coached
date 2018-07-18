@@ -2,25 +2,28 @@ var press = "sounds/click.mp3";
 var hover = "sounds/hover.mp3";
 
 /* Click Functionality */
-$("#myreplays").on("click", function() {
+$("#searchreplay").on("click", function() {
     new Audio(press).play();    
+    $("#loader").load("html/search-replay.html");
 });
 
 $("#addreplay").on("click", function() {
     new Audio(press).play();
-    $("#loader").load("html/add-replays.html");
+    $("#loader").load("html/add-replay.html");
 });
 
-$("#coachme").on("click", function() {
+$("#submitreplay").on("click", function() {
     new Audio(press).play();
+    $("#loader").load("html/submit-replay.html");
 });
 
 $("#settings").on("click", function() {
     new Audio(press).play();
+    $("#loader").load("html/settings.html");
 });
 
 /* Hover Functionality */
-$("#myreplays").mouseover(function() {
+$("#searchreplay").mouseover(function() {
     new Audio(hover).play();
 });
 
@@ -28,7 +31,7 @@ $("#addreplay").mouseover(function() {
     new Audio(hover).play();
 });
 
-$("#coachme").mouseover(function() {
+$("#submitreplay").mouseover(function() {
     new Audio(hover).play();
 });
 
