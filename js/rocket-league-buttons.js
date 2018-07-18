@@ -3,11 +3,12 @@ var hover = "sounds/hover.mp3";
 
 /* Click Functionality */
 $("#myreplays").on("click", function() {
-    new Audio(press).play();
+    new Audio(press).play();    
 });
 
 $("#addreplay").on("click", function() {
     new Audio(press).play();
+    $("#loader").load("html/add-replays.html");
 });
 
 $("#coachme").on("click", function() {

@@ -6,6 +6,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/rocket-league-btn.css" rel="stylesheet" />
+    <link href="css/add-replay.css" rel="stylesheet" />
     <title>Bread boi's Replay Manager</title>
 </head>
 
@@ -23,13 +24,13 @@
     <div class="navigation-body">
         <ul class="container">
             <li class="rocketleague-3 button" id="myreplays">
-                <a href="#">My Replays</a>
+                <a href="#">Search Replays</a>
             </li><br />
             <li class="rocketleague-3 button" id="addreplay">
                 <a href="#">Add Replay</a>
             </li><br />
             <li class="rocketleague-3 button" id="coachme">
-                <a href="#">Coach Me</a>
+                <a href="#">Send Replay</a>
             </li><br />
             <li class="rocketleague-3 button" id="settings">
                 <a href="#">Settings</a>
@@ -37,6 +38,11 @@
         </ul>
     </div>
 
+    <div class="load-content">
+        <div id="loader">
+
+        </div>
+    </div>
 
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
     <script>require('./renderer.js')</script>
