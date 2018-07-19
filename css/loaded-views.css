@@ -1,7 +1,9 @@
 .item-container {
     background-color: rgb(34, 45, 59);;
-    color:rgb(42, 55, 73);;
-    text-align: center;
+    color: white;
+    text-align: left;
     width:300px;
     height:300px;
+    overflow-y: scroll;
+    padding: 3px;
 }

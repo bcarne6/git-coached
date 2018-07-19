@@ -2,8 +2,8 @@
 ::-webkit-scrollbar { display: none; }
 
 .navigation-body {
-    height: 100px;
-    width: 100px;
+    height: auto;
+    width: auto;
     margin-right: 5.5px;
     margin-left: 5.5px;
     margin-bottom: 5.5px;
