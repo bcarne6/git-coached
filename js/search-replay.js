@@ -14,5 +14,5 @@ function searchBtnChange() {
 }
 
 function toggleFileClass(val) {
-    $(this).removeClass("btn-info");
+    $(val).button('toggle')
 }
