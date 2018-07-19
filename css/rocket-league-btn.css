@@ -11,6 +11,7 @@
     color: white;
     display: table-cell;
     vertical-align: bottom;
+    float: left;
 }
 
 /* * {
