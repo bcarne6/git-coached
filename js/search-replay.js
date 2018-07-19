@@ -8,7 +8,11 @@ function searchBtnChange() {
         if (err) throw  err;
         //the files parameter is an array of the files and folders in the path we passed. So we loop through the array, printing each file and folder
         for (let file of files) {
-            document.getElementById("searchresultstarget").innerHTML += (file + "<br />");
+            document.getElementById("searchresultstarget").innerHTML += "<button class=\"btn btn-info file-spacing\" onclick=\"toggleFileClass(this)\">" + file + "</button><br />";
         }
     });    
+}
+
+function toggleFileClass(val) {
+    $(this).removeClass("btn-info");
 }
