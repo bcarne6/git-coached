@@ -8,6 +8,16 @@
     padding: 3px;
 }
 
+.replay-submit {
+    background-color: rgb(34, 45, 59);;
+    color: white;
+    text-align: left;
+    width:300px;
+    height:300px;
+    overflow-y: scroll;
+    padding: 3px;
+}
+
 .file-spacing {
     margin-bottom: 2px;
 }

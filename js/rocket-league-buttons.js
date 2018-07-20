@@ -14,7 +14,12 @@ $("#addreplay").on("click", function() {
 
 $("#submitreplay").on("click", function() {
     new Audio(press).play();
-    $("#loader").load("html/submit-replay.html");
+    if($(".btn-success:contains('replay')").length > 0)
+    {
+        $("#loader").load("html/submit-replay.html");
+    } else {
+        alert("Please select a replay to be sent.");
+    }    
 });
 
 $("#settings").on("click", function() {
