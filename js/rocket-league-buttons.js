@@ -13,9 +13,13 @@ $("#addreplay").on("click", function() {
 });
 
 $("#submitreplay").on("click", function() {
+    var fs = require('fs-extra');
     new Audio(press).play();
     if($(".btn-success:contains('replay')").length > 0)
     {
+        var fileName = $(".btn-success").text();
+        var filePath = "testdata/" + fileName;
+        fs.copy(filePath, "testdata2/" + fileName);
         $("#loader").load("html/submit-replay.html");
     } else {
         alert("Please select a replay to be sent.");

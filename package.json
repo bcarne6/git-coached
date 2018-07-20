@@ -19,5 +19,7 @@
   "devDependencies": {
     "electron": "^2.0.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  }
 }
