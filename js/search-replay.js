@@ -13,6 +13,8 @@ function searchBtnChange() {
     });    
 }
 
-function toggleFileClass(val) {
-    $(val).button('toggle')
+function toggleFileClass(val) {    
+    $('#searchresultstarget').children().removeClass("btn-success").addClass("btn-info");
+    $(val).removeClass("btn-info");
+    $(val).addClass("btn-success");    
 }
