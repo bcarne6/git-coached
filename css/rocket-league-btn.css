@@ -30,9 +30,6 @@ a:hover, a:focus {
     text-decoration: none;    
 }
 
-a:focus > .rocketleague-3 {
-}
-
 .button {
     line-height: 30px;
     display: inline-block;
