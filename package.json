@@ -20,6 +20,7 @@
     "electron": "^2.0.5"
   },
   "dependencies": {
+    "@types/node": "^10.5.2",
     "fs-extra": "^7.0.0"
   }
 }

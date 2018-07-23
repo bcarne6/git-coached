@@ -23,8 +23,14 @@ a {
     font-size: 1em;
     display: inline-block;
     width: 225px;
-    transform: skewX(.5rad);
-    text-decoration: none;
+    transform: skewX(.5rad);    
+}
+
+a:hover, a:focus {
+    text-decoration: none;    
+}
+
+a:focus > .rocketleague-3 {
 }
 
 .button {
@@ -47,7 +53,7 @@ a {
 /* General Buttons */
 .rocketleague-3 {
     color: #FFFFFF;
-    background: rgba(0,0,0,.8);
+    background: #323232;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
@@ -66,6 +72,12 @@ a {
 }
 
 .rocketleague-3:hover a, .rocketleague-3:active a {
-    color: #005F8E!important;
+    color: #4ACDFF!important;
     text-shadow: 0 0 1px!important;
+}
+
+.rocketleague-btn-pressed {
+    background: #005F8E!important;
+    box-shadow: 0 0 5px #3CB8FF,0 0 10px #3CB8FF,inset 0 0 1px #3CB8FF,inset 0 0 4px 3px rgba(60,184,255,1)!important;
+    text-decoration: none;
 }
