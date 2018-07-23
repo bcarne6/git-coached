@@ -1,12 +1,8 @@
 const fs = require("fs");
 const os = require("os");
 
-var settingsFile = fs.readFileSync("config.json");
-var parsedSettings = JSON.parse(settingsFile);
-var replayDirectory = parsedSettings.filePath;
-
 function searchBtnChange(searchBar: any) {
-    console.log("The directory in the config file is: " + setReplayDirectory());
+    let replayDirectory = setReplayDirectory();
     let searchString = $(searchBar).val();
 
     let fileArray = fs.readdir(replayDirectory, (err: any, files: any) => {
@@ -35,10 +31,12 @@ function toggleFileClass(fileHTML: any) {
 
 function setReplayDirectory() {    
     let homeDir = os.homedir();
+    let settingsFile = fs.readFileSync("config.json");
+    let parsedSettings = JSON.parse(settingsFile);
+    let replayDirectory = parsedSettings.filePath;
 
-    if(replayDirectory === ""){
-        return homeDir + "\\Documents\\My Games\\Rocket League\\TAGame\\Demos";
-    } else {
+    if(replayDirectory === "")
+        return homeDir + "\\Documents\\My Games\\Rocket League\\TAGame\\Demos\\";
+    else
         return replayDirectory;
-    }
 }
