@@ -1,5 +1,8 @@
 /*Styling from https://codepen.io/CelloDE/pen/JWVKNL*/
-::-webkit-scrollbar { display: none; }
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 .navigation-body {
     height: auto;
@@ -14,20 +17,17 @@
     float: left;
 }
 
-/* * {
-    box-sizing: border-box;
-} */
-
 a {
     font-family: sans-serif;
     font-size: 1em;
     display: inline-block;
     width: 225px;
-    transform: skewX(.5rad);    
+    transform: skewX(.5rad);
 }
 
-a:hover, a:focus {
-    text-decoration: none;    
+a:hover,
+a:focus {
+    text-decoration: none;
 }
 
 .button {
@@ -48,6 +48,7 @@ a:hover, a:focus {
 }
 
 /* General Buttons */
+
 .rocketleague-3 {
     color: #FFFFFF;
     background: #323232;
@@ -60,21 +61,22 @@ a:hover, a:focus {
 
 .rocketleague-3:hover {
     background: #BDEEFF;
-    box-shadow: 0 0 5px #43AFFF,0 0 10px #43AFFF,inset 0 0 1px #43AFFF, inset 0 0 12px 5px rgba(255,255,255,.8);
+    box-shadow: 0 0 5px #43AFFF, 0 0 10px #43AFFF, inset 0 0 1px #43AFFF, inset 0 0 12px 5px rgba(255, 255, 255, .8);
 }
 
 .rocketleague-3:active {
-    background: #4ACDFF!important;
-    box-shadow: 0 0 5px #3CB8FF,0 0 10px #3CB8FF,inset 0 0 1px #3CB8FF,inset 0 0 4px 3px rgba(60,184,255,1)!important;
+    background: #4ACDFF !important;
+    box-shadow: 0 0 5px #3CB8FF, 0 0 10px #3CB8FF, inset 0 0 1px #3CB8FF, inset 0 0 4px 3px rgba(60, 184, 255, 1) !important;
 }
 
-.rocketleague-3:hover a, .rocketleague-3:active a {
-    color: #4ACDFF!important;
-    text-shadow: 0 0 1px!important;
+.rocketleague-3:hover a,
+.rocketleague-3:active a {
+    color: #4ACDFF !important;
+    text-shadow: 0 0 1px !important;
 }
 
 .rocketleague-btn-pressed {
-    background: #005F8E!important;
-    box-shadow: 0 0 5px #3CB8FF,0 0 10px #3CB8FF,inset 0 0 1px #3CB8FF,inset 0 0 4px 3px rgba(60,184,255,1)!important;
+    background: #005F8E !important;
+    box-shadow: 0 0 5px #3CB8FF, 0 0 10px #3CB8FF, inset 0 0 1px #3CB8FF, inset 0 0 4px 3px rgba(60, 184, 255, 1) !important;
     text-decoration: none;
 }

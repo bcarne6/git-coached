@@ -5,18 +5,18 @@ body {
 
 #title-bar {
     -webkit-app-region: drag;
-    height: 30px; 
-    background-color:rgba(25, 25, 27, 0.781);
+    height: 30px;
+    background-color: rgba(25, 25, 27, 0.781);
     padding: none;
     margin: 0px;
 }
-   
+
 #title {
     position: fixed;
     top: 0px;
-    left: 6px; 
+    left: 6px;
 }
-   
+
 #title-bar-btns {
     -webkit-app-region: no-drag;
     position: fixed;
