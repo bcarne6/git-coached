@@ -5,11 +5,11 @@ var settingsFile = fs.readFileSync("config.json");
 var parsedSettings = JSON.parse(settingsFile);
 var replayDirectory = parsedSettings.filePath;
 
-function searchBtnChange(val) {
+function searchBtnChange(searchBar: any) {
     console.log("The directory in the config file is: " + setReplayDirectory());
-    let searchString = $(val).val();
+    let searchString = $(searchBar).val();
 
-    let fileArray = fs.readdir(replayDirectory, (err, files) => {
+    let fileArray = fs.readdir(replayDirectory, (err: any, files: any) => {
         document.getElementById("searchresultstarget").innerHTML = "";
         'use strict';
         //if an error is thrown when reading the directory, we throw it. Otherwise we continue
@@ -26,10 +26,10 @@ function searchBtnChange(val) {
     });    
 }
 
-function toggleFileClass(val) {    
+function toggleFileClass(fileHTML: any) {    
     $('#searchresultstarget').children().removeClass("btn-success").addClass("btn-info");
-    $(val).removeClass("btn-info");
-    $(val).addClass("btn-success");    
+    $(fileHTML).removeClass("btn-info");
+    $(fileHTML).addClass("btn-success");    
 }
 
 

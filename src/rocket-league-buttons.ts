@@ -56,7 +56,7 @@ $("#settings").mouseover(function() {
     new Audio(hover).play();
 });
 
-function activeCategory(param) {
+function activeCategory(param: number) {
     if(param == 1)    
         $("#searchreplay").addClass("rocketleague-btn-pressed");
     else
