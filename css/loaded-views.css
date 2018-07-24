@@ -22,3 +22,18 @@
 .file-spacing {
     margin-bottom: 2px;
 }
+
+.no-changes {
+    color: white;
+    float: right;
+}
+
+.pending-changes {
+    color: red;
+    float: right;
+}
+
+.saved-changes {
+    color: green;
+    float: right;
+}

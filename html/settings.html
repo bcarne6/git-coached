@@ -1,7 +1,8 @@
 <form>
     <div class="form-group">
         <label for="directory">Where are your .replay files saved?</label>
-        <input type="text" class="form-control" id="setdir">
-        <button class="btn btn-success file-spacing" onclick="setDirectory()">Save</button>
+        <input type="file" class="form-control" id="setdir" webkitdirectory directory multiple/>        
     </div>
 </form>
+<button class="btn btn-success file-spacing" onclick="setDirectory()">Save</button>
+<div class="no-changes" id="settingsstatusmsg">No Changes</div>
