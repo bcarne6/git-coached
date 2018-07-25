@@ -7,7 +7,6 @@ function searchBtnChange(searchBar: any) {
 
     let fileArray = fs.readdir(replayDirectory, (err: any, files: any) => {
         document.getElementById("searchresultstarget").innerHTML = "";
-        'use strict';
         //if an error is thrown when reading the directory, we throw it. Otherwise we continue
         if (err) throw  err;
         //the files parameter is an array of the files and folders in the path we passed. So we loop through the array, printing each file and folder
@@ -16,7 +15,7 @@ function searchBtnChange(searchBar: any) {
             let text = fs.readFileSync(filepath);
 
             if(text.indexOf(searchString) >= 0){
-                $("#searchresultstarget").html("<button class=\"btn btn-info file-spacing\" onclick=\"toggleFileClass(this)\">" + file + "</button><br />");
+                $("#searchresultstarget").append("<button class=\"btn btn-info file-spacing\" onclick=\"toggleFileClass(this)\">" + file + "</button><br />");
             }            
         }
     });    
@@ -31,7 +30,7 @@ function toggleFileClass(fileHTML: any) {
 
 function setReplayDirectory() {    
     let homeDir = os.homedir();
-    let settingsFile = fs.readFileSync("config.json");
+    let settingsFile = fs.readFileSync("./config.json");
     let parsedSettings = JSON.parse(settingsFile);
     let replayDirectory = parsedSettings.filePath;
 
