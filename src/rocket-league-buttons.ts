@@ -1,80 +1,83 @@
-var press = "sounds/click.mp3";
-var hover = "sounds/hover.mp3";
+const press = "sounds/click.mp3";
+const hover = "sounds/hover.mp3";
 
 /* Click Functionality */
-$("#searchreplay").on("click", function() {
+$("#searchreplay").on("click", () => {
     activeCategory(1);
-    new Audio(press).play();    
+    new Audio(press).play();
     $("#loader").load("html/search-replay.html");
 });
 
-$("#addreplay").on("click", function() {
+$("#addreplay").on("click", () => {
     activeCategory(2);
     new Audio(press).play();
     $("#loader").load("html/add-replay.html");
 });
 
-$("#submitreplay").on("click", function() {
+$("#submitreplay").on("click", () => {
     activeCategory(3);
-    let fs = require('fs-extra');
+    const fs = require("fs-extra");
     new Audio(press).play();
-    if($(".btn-success:contains('replay')").length > 0)
-    {
-        let settingsFile = fs.readFileSync("config.json");
-        let parsedSettings = JSON.parse(settingsFile);
-        let replayDirectory = parsedSettings.filePath;
+    if ($(".btn-success:contains('replay')").length > 0) {
+        const settingsFile = fs.readFileSync("config.json");
+        const parsedSettings = JSON.parse(settingsFile);
+        const replayDirectory = parsedSettings.filePath;
 
-        let fileName = $(".btn-success").text();
-        let filePath = replayDirectory + fileName;
+        const fileName = $(".btn-success").text();
+        const filePath = replayDirectory + fileName;
         fs.copy(filePath, "Temp/" + fileName);
         $("#loader").load("html/submit-replay.html");
     } else {
         alert("Please select a replay to be sent.");
-    }    
+    }
 });
 
-$("#settings").on("click", function() {
+$("#settings").on("click", () => {
     activeCategory(4);
     new Audio(press).play();
     $("#loader").load("html/settings.html");
 });
 
 /* Hover Functionality */
-$("#searchreplay").mouseover(function() {
+$("#searchreplay").mouseover(() => {
     new Audio(hover).play();
 });
 
-$("#addreplay").mouseover(function() {
+$("#addreplay").mouseover(() => {
     new Audio(hover).play();
 });
 
-$("#submitreplay").mouseover(function() {
+$("#submitreplay").mouseover(() => {
     new Audio(hover).play();
 });
 
-$("#settings").mouseover(function() {
+$("#settings").mouseover(() => {
     new Audio(hover).play();
 });
 
 function activeCategory(param: number) {
-    if(param == 1)    
+    if (param === 1) {
         $("#searchreplay").addClass("rocketleague-btn-pressed");
-    else
+    } else {
         $("#searchreplay").removeClass("rocketleague-btn-pressed");
-    
-    if(param == 2)    
+    }
+
+    if (param === 2) {
         $("#addreplay").addClass("rocketleague-btn-pressed");
-    else
+    } else {
         $("#addreplay").removeClass("rocketleague-btn-pressed");
-    
-    if(param == 3)    
+    }
+
+    if (param === 3) {
         $("#submitreplay").addClass("rocketleague-btn-pressed");
-    else
+    } else {
         $("#submitreplay").removeClass("rocketleague-btn-pressed");
-    
-    if(param == 4)    
+    }
+
+    if (param === 4) {
         $("#settings").addClass("rocketleague-btn-pressed");
-    else
+    } else {
         $("#settings").removeClass("rocketleague-btn-pressed");
-    
+    }
+
 }

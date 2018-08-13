@@ -1,41 +1,44 @@
-const fs = require("fs");
-const os = require("os");
+import fs = require("fs");
+import os = require("os");
 
 function searchBtnChange(searchBar: any) {
-    let replayDirectory = setReplayDirectory();
-    let searchString = $(searchBar).val();
+    const replayDirectory = setReplayDirectory();
+    const searchString = $(searchBar).val().toString();
 
-    let fileArray = fs.readdir(replayDirectory, (err: any, files: any) => {
+    fs.readdir(replayDirectory, (err: any, files: any) => {
         document.getElementById("searchresultstarget").innerHTML = "";
-        //if an error is thrown when reading the directory, we throw it. Otherwise we continue
-        if (err) throw  err;
-        //the files parameter is an array of the files and folders in the path we passed. So we loop through the array, printing each file and folder
-        for (let file of files) {
-            let filepath = replayDirectory + file;
-            let text = fs.readFileSync(filepath);
 
-            if(text.indexOf(searchString) >= 0){
-                $("#searchresultstarget").append("<button class=\"btn btn-info file-spacing\" onclick=\"toggleFileClass(this)\">" + file + "</button><br />");
-            }            
+        if (err) { throw err; }
+
+        for (const file of files) {
+            const filepath = replayDirectory + file;
+            const text = fs.readFileSync(filepath);
+
+            if (text.indexOf(searchString) >= 0) {
+                $("#searchresultstarget")
+                .append("<button class=\"btn btn-info file-spacing\" onclick=\"toggleFileClass(this)\">"
+                + file + "</button><br />");
+            }
         }
-    });    
+    });
 }
 
-function toggleFileClass(fileHTML: any) {    
-    $('#searchresultstarget').children().removeClass("btn-success").addClass("btn-info");
+function toggleFileClass(fileHTML: any) {
+    $("#searchresultstarget").children().removeClass("btn-success").addClass("btn-info");
     $(fileHTML).removeClass("btn-info");
-    $(fileHTML).addClass("btn-success");    
+    $(fileHTML).addClass("btn-success");
 }
 
 
-function setReplayDirectory() {    
-    let homeDir = os.homedir();
-    let settingsFile = fs.readFileSync("./config.json");
-    let parsedSettings = JSON.parse(settingsFile);
-    let replayDirectory = parsedSettings.filePath;
+function setReplayDirectory() {
+    const homeDir = os.homedir();
+    const settingsFile = fs.readFileSync("./config.json").toString();
+    const parsedSettings = JSON.parse(settingsFile);
+    const replayDirectory = parsedSettings.filePath;
 
-    if(replayDirectory === "")
+    if (replayDirectory === "") {
         return homeDir + "\\Documents\\My Games\\Rocket League\\TAGame\\Demos\\";
-    else
+    } else {
         return replayDirectory;
+    }
 }
