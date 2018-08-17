@@ -1,7 +1,5 @@
-import fs = require("fs");
-import os = require("os");
-
 function searchBtnChange(searchBar: any) {
+    const fs = require("fs");
     const replayDirectory = setReplayDirectory();
     const searchString = $(searchBar).val().toString();
 
@@ -31,6 +29,8 @@ function toggleFileClass(fileHTML: any) {
 
 
 function setReplayDirectory() {
+    const fs = require("fs");
+    const os = require("os");
     const homeDir = os.homedir();
     const settingsFile = fs.readFileSync("./config.json").toString();
     const parsedSettings = JSON.parse(settingsFile);
