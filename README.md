@@ -1,1 +1,1 @@
-# Send your Rocket League .Replay files through Discord
+# Makes sharing your replays easier
