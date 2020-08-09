@@ -1,31 +1,38 @@
 {
-  "name": "rl-replay-uploader",
+  "name": "rl-replay-manager",
   "version": "1.0.0",
-  "description": "An Electron appliction that sends Rocket League .replay files via Discord.",
+  "description": "An Electron appliction that helps manage .replay files",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "npm run build && electron ./dist/main.js"
+    "start": "npm run build && electron ./app/js/main.js --no-sandbox"
   },
-  "repository": "https://github.com/bcarne6/git-coached",
-  "keywords": [
-    "Electron",
-    "Rocket",
-    "League",
-    "replay",
-    "send",
-    "typescript"
-  ],
+  "repository": "https://github.com/breadboi/Rocket-League-Replay-Share",
+  "keywords": [],
   "author": "Brett Carney",
   "license": "MIT",
-  "devDependencies": {
-    "@types/jquery": "^3.3.5",
-    "electron": "^2.0.2",
-    "tslint": "^5.10.0",
-    "typescript": "^2.8.3"
-  },
   "dependencies": {
-    "edit-json-file": "^1.1.0"
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "bootstrap": "^4.5.2",
+    "edit-json-file": "^1.4.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "electron": "^9.2.0",
+    "gulp": "^4.0.2",
+    "tslint": "^6.1.3",
+    "typescript": "^3.9.7",
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react": "^6.24.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-minify": "^3.1.0"
   }
 }

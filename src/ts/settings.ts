@@ -1,8 +1,8 @@
 function setDirectory() {
     const editJsonFile = require("edit-json-file");
-    const config = editJsonFile("./config.json");
+    const config = editJsonFile("app/settings/config.json");
     const pathObject = (document.getElementById("setdir") as HTMLInputElement).files[0];
-    const replayPath = pathObject.path + "\\";
+    const replayPath = pathObject.path;
     config.set("filePath", replayPath);
     config.save();
 

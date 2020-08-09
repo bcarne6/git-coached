@@ -1,2 +1,7 @@
+app/assets/*
+app/css/*
+app/html/*
+app/js/*
+app/vendor/*
+app/settings/*
 node_modules
-dist

@@ -32,7 +32,7 @@ function setReplayDirectory() {
     const fs = require("fs");
     const os = require("os");
     const homeDir = os.homedir();
-    const settingsFile = fs.readFileSync("./config.json").toString();
+    const settingsFile = fs.readFileSync("app/settings/config.json").toString();
     const parsedSettings = JSON.parse(settingsFile);
     const replayDirectory = parsedSettings.filePath;
 

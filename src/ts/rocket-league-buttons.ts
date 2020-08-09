@@ -1,17 +1,21 @@
-const press = "sounds/click.mp3";
-const hover = "sounds/hover.mp3";
+// Imports
+let $ = require('jquery');
+
+// Constants
+const press = "../assets/sounds/click.mp3";
+const hover = "../assets/sounds/hover.mp3";
 
 /* Click Functionality */
 $("#searchreplay").on("click", () => {
     activeCategory(1);
     new Audio(press).play();
-    $("#loader").load("html/search-replay.html");
+    $("#loader").load("search-replay.html");
 });
 
 $("#addreplay").on("click", () => {
     activeCategory(2);
     new Audio(press).play();
-    $("#loader").load("html/add-replay.html");
+    $("#loader").load("add-replay.html");
 });
 
 $("#submitreplay").on("click", () => {
@@ -26,7 +30,7 @@ $("#submitreplay").on("click", () => {
         const fileName = $(".btn-success").text();
         const filePath = replayDirectory + fileName;
         fs.copy(filePath, "Temp/" + fileName);
-        $("#loader").load("html/submit-replay.html");
+        $("#loader").load("submit-replay.html");
     } else {
         alert("Please select a replay to be sent.");
     }
@@ -35,7 +39,7 @@ $("#submitreplay").on("click", () => {
 $("#settings").on("click", () => {
     activeCategory(4);
     new Audio(press).play();
-    $("#loader").load("html/settings.html");
+    $("#loader").load("settings.html");
 });
 
 /* Hover Functionality */
