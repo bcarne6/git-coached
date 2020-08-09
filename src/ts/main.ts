@@ -10,15 +10,17 @@ function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
     frame: false,
-    height: 660,
-    width: 865,
+    height: 1000,
+    width: 1200,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
-  // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, "../index.html"));
 
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+
+  // and load the index.html of the app.
+  mainWindow.loadFile(path.join(__dirname, "../html/index.html"));
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {

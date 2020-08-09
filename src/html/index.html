@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/rocket-league-btn.css" rel="stylesheet" />
-    <link href="css/loaded-views.css" rel="stylesheet" />
-    <title>Bread boi's Replay Manager</title>
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/rocket-league-btn.css" rel="stylesheet" />
+    <link href="../css/loaded-views.css" rel="stylesheet" />
+    <title>Replay Manager</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <div id="title-bar">
         <div id="title">Replay Manager</div>
         <div id="title-bar-btns">
-            <button id="min-btn">🗕</button>
+            <button id="min-btn">_</button>
             <button id="max-btn">☐</button>
             <button id="close-btn">╳</button>
         </div>
@@ -54,17 +54,14 @@
             module = undefined;
         }
     </script>
-    <script>
-        require("./dist/renderer.js")
-    </script>
-    <script src="src/jquery-3.3.1.min.js"></script>
-    <script src="src/popper.min.js"></script>
-    <script src="src/tether.min.js"></script>
-    <script src="src/bootstrap.min.js"></script>
-    <script src="dist/win-controls.js"></script>
-    <script src="dist/rocket-league-buttons.js"></script>
-    <script src="dist/search-replay.js"></script>
-    <script src="dist/settings.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../../node_modules/popper.js/dist/popper.min.js"></script> -->
+    <!-- <script src="vendor/tether.min.js"></script> -->
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/win-controls.js"></script>
+    <script src="../js/rocket-league-buttons.js"></script>
+    <script src="../js/search-replay.js"></script>
+    <script src="../js/settings.js"></script>
     <script>
         if (window.module) module = window.module;
     </script>

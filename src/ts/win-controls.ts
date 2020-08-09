@@ -4,12 +4,12 @@
     const { app, BrowserWindow } = electron.remote;
 
     function init() {
-        $("#min-btn").on("click", (e) => {
+        $("#min-btn").on("click", () => {
             const window = BrowserWindow.getFocusedWindow();
             window.minimize();
         });
 
-        $("#max-btn").on("click", (e) => {
+        $("#max-btn").on("click", () => {
             const window = BrowserWindow.getFocusedWindow();
             if (window.isMaximized()) {
                 window.unmaximize();
@@ -18,7 +18,7 @@
             }
         });
 
-        $("#close-btn").on("click", (e) => {
+        $("#close-btn").on("click", () => {
             const window = BrowserWindow.getFocusedWindow();
             window.close();
         });
